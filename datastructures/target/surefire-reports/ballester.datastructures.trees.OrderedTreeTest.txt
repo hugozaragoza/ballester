@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: ballester.datastructures.trees.OrderedTreeTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec <<< FAILURE!
+ballester.datastructures.trees.OrderedTreeTest.testGetChildren()  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at ballester.datastructures.trees.OrderedTreeTest.testGetChildren(OrderedTreeTest.java:42)
+Caused by: java.lang.ClassNotFoundException: org.junit.Assert
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 19 more
+
+ballester.datastructures.trees.OrderedTreeTest.testTreeBuiliding()  Time elapsed: 0.004 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at ballester.datastructures.trees.OrderedTreeTest.testTreeBuiliding(OrderedTreeTest.java:76)
+
+ballester.datastructures.trees.OrderedTreeTest.testPushUnder()  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at ballester.datastructures.trees.OrderedTreeTest.testPushUnder(OrderedTreeTest.java:145)
+

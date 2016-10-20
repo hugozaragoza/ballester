@@ -1,0 +1,5135 @@
+2016-10-07 07:26:06,335 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+There, was, a, big, green, dragon
+2016-10-07 07:26:06,336 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'There ?'		 {There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N3(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N4(L1)        'big ?'		 {big ?}
+
+
+N5(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N6(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+
+
+2016-10-07 07:26:06,336 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'There ?'		 {There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'big ?'		 {big ?}
+
+
+N5(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N6(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+
+2016-10-07 07:26:06,338 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, dragon, attackd, a, princess
+2016-10-07 07:26:06,339 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+N3(L1)        'attackd ?'		 {attackd ?}
+
+
+N4(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+
+
+2016-10-07 07:28:48,375 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+===============================================There, was, a, big, green, dragon
+2016-10-07 07:28:53,168 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        '===============================================There ?'		 {===============================================There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N3(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N4(L1)        'big ?'		 {big ?}
+
+
+N5(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N6(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+
+
+2016-10-07 07:29:03,566 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        '===============================================There ?'		 {===============================================There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'big ?'		 {big ?}
+
+
+N5(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N6(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+
+2016-10-07 07:29:03,568 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, dragon, attackd, a, princess
+2016-10-07 07:29:41,746 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+N3(L1)        'attackd ?'		 {attackd ?}
+
+
+N4(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+
+
+2016-10-07 07:31:12,272 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+===============================================There, was, a, big, green, dragon
+2016-10-07 07:31:12,274 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        '===============================================There ?'		 {===============================================There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N3(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N4(L1)        'big ?'		 {big ?}
+
+
+N5(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N6(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+
+
+2016-10-07 07:31:12,274 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        '===============================================There ?'		 {===============================================There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'big ?'		 {big ?}
+
+
+N5(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N6(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+
+2016-10-07 07:31:12,276 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, dragon, attackd, a, princess
+2016-10-07 07:31:12,277 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+N3(L1)        'attackd ?'		 {attackd ?}
+
+
+N4(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+
+
+2016-10-07 07:31:12,278 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+       _exists : true
+     ]
+
+
+N3(L1)        'attackd ?'		 {attackd ?}
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+       _exists : false
+     ]
+
+
+
+2016-10-07 07:31:46,524 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+===============================================There, was, a, big, green, dragon
+2016-10-07 07:31:46,526 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        '===============================================There ?'		 {===============================================There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N3(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N4(L1)        'big ?'		 {big ?}
+
+
+N5(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N6(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+
+
+2016-10-07 07:31:46,527 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        '===============================================There ?'		 {===============================================There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'big ?'		 {big ?}
+
+
+N5(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N6(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+
+2016-10-07 07:31:46,529 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, dragon, attacked, a, princess
+2016-10-07 07:31:46,529 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N4(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+
+
+2016-10-07 07:31:46,530 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+       _exists : true
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+       _exists : false
+     ]
+
+
+
+2016-10-07 07:36:23,903 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+===============================================There, was, a, big, green, dragon
+2016-10-07 07:36:23,904 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        '===============================================There ?'		 {===============================================There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N3(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N4(L1)        'big ?'		 {big ?}
+
+
+N5(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N6(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+
+
+2016-10-07 07:36:23,905 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        '===============================================There ?'		 {===============================================There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'big ?'		 {big ?}
+
+
+N5(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N6(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+
+2016-10-07 07:36:23,906 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, dragon, attacked, a, princess
+2016-10-07 07:36:23,907 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N4(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+
+
+2016-10-07 07:40:13,095 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+===============================================There, was, a, big, green, dragon
+2016-10-07 07:40:13,096 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        '===============================================There ?'		 {===============================================There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N3(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N4(L1)        'big ?'		 {big ?}
+
+
+N5(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N6(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+
+
+2016-10-07 07:40:13,097 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        '===============================================There ?'		 {===============================================There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'big ?'		 {big ?}
+
+
+N5(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N6(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+
+2016-10-07 07:40:13,098 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, dragon, attacked, a, princess
+2016-10-07 07:40:13,099 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N4(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+
+
+2016-10-07 07:40:13,100 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : true
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+       _exists : false
+     ]
+
+
+
+2016-10-09 22:41:14,571 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+===============================================There, was, a, big, green, dragon
+2016-10-09 22:41:14,573 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        '===============================================There ?'		 {===============================================There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N3(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N4(L1)        'big ?'		 {big ?}
+
+
+N5(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N6(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+
+
+2016-10-09 22:41:14,575 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        '===============================================There ?'		 {===============================================There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'big ?'		 {big ?}
+
+
+N5(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N6(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+
+2016-10-09 22:41:14,576 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, knight, was, bored
+2016-10-09 22:41:14,577 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+
+N3(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+
+
+2016-10-09 22:41:14,577 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+       _exists : true
+     ]
+
+
+N3(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+
+
+2016-10-09 22:41:14,579 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+       _exists : true
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, dragon, attacked, a, princess
+2016-10-09 22:41:14,579 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N4(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+
+
+2016-10-09 22:41:14,580 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : true
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+       _exists : false
+     ]
+
+
+
+2016-10-09 22:41:57,641 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+There, was, a, big, green, dragon
+2016-10-09 22:41:57,642 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'There ?'		 {There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N3(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N4(L1)        'big ?'		 {big ?}
+
+
+N5(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N6(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+
+
+2016-10-09 22:41:57,643 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'There ?'		 {There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'big ?'		 {big ?}
+
+
+N5(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N6(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+
+2016-10-09 22:41:57,645 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, knight, was, bored
+2016-10-09 22:41:57,646 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+
+N3(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+
+
+2016-10-09 22:41:57,647 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+       _exists : true
+     ]
+
+
+N3(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+
+
+2016-10-09 22:41:57,649 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+       _exists : true
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, dragon, attacked, a, princess
+2016-10-09 22:41:57,650 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N4(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+
+
+2016-10-09 22:41:57,651 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : true
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+       _exists : false
+     ]
+
+
+
+2016-10-09 22:42:16,745 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+There, was, a, green, dragon
+2016-10-09 22:42:16,747 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'There ?'		 {There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N3(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N4(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N5(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+
+
+2016-10-09 22:42:16,748 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'There ?'		 {There ?}
+
+
+N2(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N5(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+
+2016-10-09 22:42:16,750 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, knight, was, bored
+2016-10-09 22:42:16,750 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+
+N3(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+
+
+2016-10-09 22:42:16,751 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+       _exists : true
+     ]
+
+
+N3(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+
+
+2016-10-09 22:42:16,752 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+       _exists : true
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, dragon, attacked, a, princess
+2016-10-09 22:42:16,753 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N4(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+
+
+2016-10-09 22:42:16,754 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : true
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+       _exists : false
+     ]
+
+
+
+2016-10-09 22:42:32,923 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+a, green, dragon
+2016-10-09 22:42:32,924 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N2(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N3(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+
+
+2016-10-09 22:42:32,925 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N3(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+
+2016-10-09 22:42:32,926 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, knight, was, bored
+2016-10-09 22:42:32,927 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+
+N3(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+
+
+2016-10-09 22:42:32,927 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+       _exists : true
+     ]
+
+
+N3(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+
+
+2016-10-09 22:42:32,929 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+       _exists : true
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, dragon, attacked, a, princess
+2016-10-09 22:42:32,930 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N4(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+
+
+2016-10-09 22:42:32,931 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : true
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+       _exists : false
+     ]
+
+
+
+2016-10-09 22:43:20,162 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+a, green, dragon
+2016-10-09 22:43:20,165 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N2(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N3(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+
+
+2016-10-09 22:43:20,166 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N3(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+
+2016-10-09 22:43:20,167 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, knight, was, bored
+2016-10-09 22:43:20,168 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+
+N3(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+
+
+2016-10-09 22:43:20,169 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+       _exists : true
+     ]
+
+
+N3(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+
+
+2016-10-09 22:43:20,171 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+       _exists : true
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, dragon, attacked, the, princess
+2016-10-09 22:43:20,171 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N4(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+
+
+2016-10-09 22:43:20,173 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : true
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+       _exists : true
+     ]
+
+
+
+2016-10-09 22:49:02,590 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+a, green, dragon
+2016-10-09 22:49:02,592 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+
+N2(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N3(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+     ]
+
+
+
+2016-10-09 22:49:02,592 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+
+N3(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+
+2016-10-09 22:49:02,594 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, knight, was, bored
+2016-10-09 22:49:02,594 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+     ]
+
+
+N3(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+
+
+2016-10-09 22:49:02,595 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+       _exists : true
+     ]
+
+
+N3(L1)        'was ?'		 {was ?}
+
+
+N4(L1)        'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+
+
+2016-10-09 22:49:02,596 DEBUG [SimpleParser] ---------------------
+LEXICON:
+'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+'knight'		 {knight}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : knight
+       _exists : true
+     ]
+
+'red'		 {red}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : red
+     ]
+
+'blue'		 {blue}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : blue
+     ]
+
+'green'		 {green}
+*SYN:      [
+       pos : ADJ
+     ]
+*SEM:      [
+       color : green
+     ]
+
+'hungry'		 {hungry}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : hungry
+     ]
+
+'agressive'		 {agressive}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : agressive
+     ]
+
+'scared'		 {scared}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : scared
+     ]
+
+'bored'		 {bored}
+*SYN:      [
+       pos : ADV
+     ]
+*SEM:      [
+       forceState : bored
+     ]
+
+'a'		 {a}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : false
+     ]
+
+'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+---------------------
+SENTENCE:
+The, dragon, attacked, the, princess
+2016-10-09 22:49:02,597 DEBUG [SimpleParser] ---------------------
+PARSE 0:
+N0(L0)    '_S'		 {_S}
+
+
+N1(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : false
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N4(L1)        'the'		 {the}
+*SYN:      [
+       pos : DET
+     ]
+*SEM:      [
+       _exists : true
+     ]
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+     ]
+
+
+
+2016-10-09 22:49:02,597 DEBUG [SimpleParser] ---------------------
+PARSE 1:
+N0(L0)    '_S'		 {_S}
+
+
+N2(L1)        'dragon'		 {dragon}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : dragon
+       _exists : true
+     ]
+
+
+N3(L1)        'attacked ?'		 {attacked ?}
+
+
+N5(L1)        'princess'		 {princess}
+*SYN:      [
+       pos : N
+     ]
+*SEM:      [
+       type : princess
+       _exists : true
+     ]
+
+
+

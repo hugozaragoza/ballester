@@ -1,0 +1,36 @@
+.root{
+/*	-fx-background-color: white; */
+    -fx-font-size: 14pt;
+    -fx-font-family: "Palatino";
+    -fx-padding: 10 10 10 10;
+ }
+
+.tab-pane *.tab-header-background {
+/*    -fx-background-color: white; */
+}
+
+.button{
+    -fx-font-size: 12pt;
+    -fx-font-family: "Arial";
+}
+
+.toggle-button{
+    -fx-font-size: 12pt;
+    -fx-font-family: "Arial";
+}
+
+.text-field{
+    -fx-font-size: 24pt;
+    
+    /* these three together give you a margin: */
+    -fx-padding: 20px 20px 20px 20px;
+    -fx-border-insets: 20px 20px 20px 20px;
+    -fx-background-insets: 20px 20px 20px 20px;
+}
+
+.narrate-pane{
+}
+
+.game-pane{
+}
+
