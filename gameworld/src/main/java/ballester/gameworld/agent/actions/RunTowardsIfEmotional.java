@@ -16,8 +16,8 @@ public class RunTowardsIfEmotional extends MoveToAction {
     private EmotionalState triggerState;
 
     public RunTowardsIfEmotional(AgentWorld world, Agent actor, AgentFilter[] filter, EmotionalState triggerState,
-	    double targetMaxRange, double toDistance) {
-	super(world, actor, null, filter, targetMaxRange, toDistance);
+	    double targetMaxRange) {
+	super(world, actor, null, filter, targetMaxRange);
 	this.triggerState = triggerState;
 	this.speedModifier = 2.0;
     }

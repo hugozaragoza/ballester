@@ -12,4 +12,8 @@ package ballester.gameworld.agent.characters;
  */
 public class Dragon extends Beast {
 
+    public Dragon() {
+	super();
+	relativeSpeed *= 1.5;
+    }
 }

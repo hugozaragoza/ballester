@@ -11,6 +11,7 @@ import ballester.gameworld.agent.AgentProperties;
 import ballester.gameworld.agent.AgentWorld;
 import ballester.gameworld.agent.StillAgent;
 import ballester.gameworld.agent.actions.Action;
+import ballester.gameworld.physics.Geometry;
 import ballester.gameworld.physics.HPoint;
 import ballester.gameworld.physics.Point;
 import javafx.geometry.Point2D;
@@ -22,6 +23,7 @@ import javafx.scene.shape.Ellipse;
 import javafx.scene.text.Text;
 import javafx.scene.text.Font;
 import javafx.scene.web.WebView;
+import javafx.geometry.BoundingBox;
 import javafx.geometry.Bounds;
 
 @SuppressWarnings("restriction")
@@ -62,7 +64,7 @@ public class GraphicRenderer1 extends Renderer {
 
     @Override
     public void drawBox(AgentWorld w) {
-	Point2D tl = absPoint(new Point(0, 0));
+	Point2D tl = topleft(new Point(0, 0));
 	Rectangle r = new Rectangle(tl.getX(), tl.getY(), w.width, w.height);
 	r.setStroke(Color.BLUE);
 	r.setStrokeWidth(1);
@@ -96,29 +98,37 @@ public class GraphicRenderer1 extends Renderer {
 	// if (screen.size() < 1)
 	// screen.add(new String[LEN]);
 	//
-	Double h = a.props.getDouble(AgentProperties.PropName.SIZEH);
-	Double w = a.props.getDouble(AgentProperties.PropName.SIZEH);
-	if (h == null)
-	    h = AGENT_bh;
-	if (w == null)
-	    w = AGENT_bw;
-	Point2D tl = absCenter(a.point, w, h);
 
-	double y = tl.getY();
-	double x = tl.getX();
+	Double w = a.props.getSize().getX();
+	Double h = a.props.getSize().getY();
+	Point2D tlB = topleft(a.point, w, h);
+	Point2D tlC = topleft(a.point, 0, 0);
+
+	// // TESTING:
+	// Shape ss = new Rectangle(tl.getX(), tl.getY(), 20, 30);
+	// ss.setFill(null);
+	// ss.setStroke(Color.RED);
+	// ss.setStrokeWidth(1.0);
+	// gamePane.getChildren().add(ss);
+	//
+	// ss = new Ellipse(tl.getX(), tl.getY(), 20, 30);
+	// ss.setFill(null);
+	// ss.setStroke(Color.GREEN);
+	// ss.setStrokeWidth(1.0);
+	// gamePane.getChildren().add(ss);
+
 	Shape r;
 	switch (a.graphicInfo.shape) {
 	case CIRCL:
-	    r = new Ellipse(x, y, w, h);
+	    r = new Ellipse(tlC.getX(), tlC.getY(), w, h);
 	    break;
 
 	case RECT: // default
-	    r = new Rectangle(x, y, w, h);
+	    r = new Rectangle(tlB.getX(), tlB.getY(), w, h);
 	    break;
-
 	default:
 	    logger.error("UNKNOWN shape: " + a.graphicInfo.shape.name());
-	    r = new Rectangle(tl.getX(), tl.getY(), w, h);
+	    r = new Rectangle(tlB.getX(), tlB.getY(), w, h);
 	    break;
 	}
 	Color color = color(a.props.getColor());
@@ -131,9 +141,13 @@ public class GraphicRenderer1 extends Renderer {
 	// r.setStrokeWidth(1);
 	gamePane.getChildren().add(r);
 
-	boolean debugThisObject = !(a instanceof StillAgent);
+	// HEALTH BAR
+	Shape healthBar = drawHealthBath(tlB, w, h, a.props.getHealth(), a.props.getHealthNormal());
+	gamePane.getChildren().add(healthBar);
+
+	boolean debugThisObject = true;// !(a instanceof StillAgent);
 	if (DISPLAY_RANGES && debugThisObject) {
-	    Point2D c = absCenter(a.point, 0, 0);
+	    Point2D c = topleft(a.point, 0, 0);
 	    ArrayList<Shape> ranges = new ArrayList<>();
 	    ranges.add(new Ellipse(c.getX(), c.getY(), Action.D_VERYNEAR, Action.D_VERYNEAR));
 	    ranges.add(new Ellipse(c.getX(), c.getY(), Action.D_NEAR, Action.D_NEAR));
@@ -147,14 +161,15 @@ public class GraphicRenderer1 extends Renderer {
 	    }
 	}
 	Bounds sb = r.getBoundsInLocal();
-	y = sb.getMaxY();
+	double y = sb.getMaxY();
+	double x = sb.getMinX();
 
 	if (a.graphicInfo.drawTitle) {
 	    // String title = a.getClass().getSimpleName();
 	    // Text text = new Text(x, y, title);
 	    // gamePane.getChildren().add(text);
 	    // y += GAP * 2;
-	    gamePane.getChildren().add(oneLetterIcon(tl, sb, a));
+	    gamePane.getChildren().add(oneLetterIcon(tlC, a));
 	}
 
 	if (a.lastAction != null && a.lastAction.getDisplay_action_noise()) {
@@ -202,12 +217,31 @@ public class GraphicRenderer1 extends Renderer {
     }
 
     /**
+     * @param tlB
+     * @param w
+     * @param h
+     * @param health
+     * @param healthNormal
+     * @return
+     */
+    private Shape drawHealthBath(Point2D tlB, Double w, Double h, Double health, Double healthNormal) {
+	double HEALTHBAR_H = 5;
+	double ratio = health / healthNormal;
+	double healthw = ratio * w;
+	Rectangle r = new Rectangle(tlB.getX(), tlB.getY() - HEALTHBAR_H, healthw, HEALTHBAR_H);
+	Color c = ratio > 0.5 ? Color.GREEN : (ratio > 0.3 ? Color.ORANGE : Color.RED);
+	r.setFill(c);
+	r.setStrokeWidth(0.0);
+	return r;
+    }
+
+    /**
      * @param point
      * @return
      */
-    private Point2D absCenter(Point point, double w, double h) {
+    private Point2D topleft(Point point, double w, double h) {
 	Point2D p = new Point2D(point.getX(), point.getY());
-	p = p.add(-w / 2.0, -h / 2.0); // go to center
+	p = p.add(-w / 2.0, -h / 2.0); // go to topleft
 	p = p.multiply(SCENE_SCALE);
 	p = p.add(SCENE_OFFSET);
 	return p;
@@ -217,8 +251,8 @@ public class GraphicRenderer1 extends Renderer {
      * @param hPoint
      * @return
      */
-    private Point2D absPoint(Point hPoint) {
-	return absCenter(hPoint, 0.0, 0.0);
+    private Point2D topleft(Point hPoint) {
+	return topleft(hPoint, 0.0, 0.0);
     }
 
     /**
@@ -226,13 +260,12 @@ public class GraphicRenderer1 extends Renderer {
      * @param s
      * @param alias
      */
-    private Text oneLetterIcon(Point2D tl, Bounds sb, Agent a) {
+    private Text oneLetterIcon(Point2D tl, Agent a) {
 	String alias = a.getClass().getSimpleName().substring(0, 1).toUpperCase();
-	Text textAlias = new Text(sb.getMinX(), sb.getMaxY(), alias);
-
-	// double scalex = tb.getWidth() / sb.getWidth();
-	// textAlias.setScaleX(scalex);
-	// textAlias.setScaleY(scalex);
+	Text textAlias = new Text(tl.getX(), tl.getY(), alias);
+	Bounds sb = textAlias.getBoundsInLocal();
+	textAlias.setX(textAlias.getX() - sb.getWidth() / 2.0);
+	textAlias.setY(textAlias.getY() + sb.getHeight() / 2.0);
 	return textAlias;
     }
 

@@ -13,14 +13,12 @@ import ballester.gameworld.physics.Physics;
 import ballester.gameworld.physics.Point;
 
 public class MoveToAction extends Action {
+    final private static Logger logger = Logger.getLogger(MoveToAction.class);
 
     double speedModifier = 3.0;
-    double toDistance = Action.D_TOUCHING;
 
-    public MoveToAction(AgentWorld world, Agent actor, Agent target, AgentFilter[] filter, Double targetRange,
-	    Double toDistance) {
-	super(world, actor, target, filter, targetRange);
-	this.toDistance = toDistance;
+    public MoveToAction(AgentWorld world, Agent actor, Agent target, AgentFilter[] filter, double targetMaxRange) {
+	super(world, actor, target, filter, targetMaxRange);
     }
 
     @Override
@@ -39,14 +37,20 @@ public class MoveToAction extends Action {
 	if (target != null) {
 	    Point v = new Point(target.point).minus(actor.point);
 	    double speed = actor.relativeSpeed * speedModifier;
+	    String h = ("AGENT " + actor.name);
 	    if (isNear(target, actor)) {
+		logger.debug(h + " isNear " + target.name);
 		speed /= 2;
 	    }
 	    if (isVeryNear(target, actor)) {
-		speed = 1.0;
+		logger.debug(h + " isVeryNear " + target.name);
+		speed = 1.0 * Math.signum(speed);
 	    }
-	    dynamics = new Dynamics(v.norm().scale(speed), new Point(0.0, 0.0));
-	    actor.world.physics.move(actor.point, dynamics);
+	    v.norm().scale(speed);
+	    logger.debug(h + " SPEED: " + speed + ", v=" + v);
+	    dynamics = new Dynamics(v, new Point(0.0, 0.0));
+	    actor.move(dynamics);
+
 	}
     }
 
@@ -55,7 +59,7 @@ public class MoveToAction extends Action {
 	if (target == null)
 	    return false;
 
-	boolean completed = isNotFar(target, actor, toDistance);
+	boolean completed = withinDstanceOfInteraction(target, actor);
 	return completed;
     }
 

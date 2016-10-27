@@ -36,7 +36,7 @@ public class Lexicon extends ArrayList<Word> {
 	    "violet", "white", "yellow" };
 
     public enum Pos {
-	N, ADJ0, DET, ADV, V2
+	N, ADJ0, DET, ADV, V2, COMP
     }
 
     public String info1() {
@@ -57,8 +57,15 @@ public class Lexicon extends ArrayList<Word> {
      */
     public static Lexicon getLexicon() {
 	Lexicon lexicon = new Lexicon();
+	Word w;
 	ArrayList<Word> ws;
 	FeatStruct sem, syn;
+
+	// COMPOSITES
+	w = new Word("and");
+	w.syntax.add(new Feature(FEATNAME_POS, Pos.COMP.name()));
+	w.semmantics.add(new Feature("_comp", "&"));
+	lexicon.add(w);
 
 	// NOUNS
 
@@ -72,7 +79,7 @@ public class Lexicon extends ArrayList<Word> {
 	ws = WordFactory.buildWords(new String[] { "princess", "dragon", "knight", "bow", "candy" }, syn, sem);
 	lexicon.addAll(ws);
 
-	// COLORS:
+	// ADJs:
 
 	syn = new FeatStruct();
 	syn.add(new Feature(FEATNAME_POS, Pos.ADJ0.name()));
@@ -109,8 +116,6 @@ public class Lexicon extends ArrayList<Word> {
 	lexicon.addAll(ws);
 
 	// DETERMINANTS
-	Word w;
-
 	w = new Word("a");
 	w.syntax.add(new Feature(FEATNAME_POS, Pos.DET.name()));
 	w.semmantics.set(SEM_GROUNDED, false);

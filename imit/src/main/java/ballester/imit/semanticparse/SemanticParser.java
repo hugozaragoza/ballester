@@ -31,15 +31,21 @@ public class SemanticParser {
     final private static Logger logger = Logger.getLogger(SemanticParser.class);
 
     /**
+     * Updates {@code stateWorld} based on {@code wt}.
+     * 
+     * Makes minor modifications to semantics in wt (basically only marking)
+     * 
      * @param wt
+     * @param references
      * @param wS0
-     * @return
+     * @return world representation of sentence
      * @throws Exception
      */
-    public static AgentWorld parseSem1(WordTree wt, AgentWorld stateWorld) throws Exception {
+    public static AgentWorld parseSem1(WordTree wt, AgentWorld stateWorld, DiscourseDomain references)
+	    throws Exception {
 
 	// GROUND ALL OBJECTS:
-	AgentWorld wS0 = parseSem1_GroundObjects(wt, stateWorld);
+	AgentWorld wS0 = parseSem1_GroundObjects(wt, stateWorld, references);
 
 	// APPLY VERBS:
 	OrderedTreeIterator<Word> wi;
@@ -112,10 +118,12 @@ public class SemanticParser {
     /**
      * @param sw
      * @param stateWorld
+     * @param references
      * @return
      * @throws Exception
      */
-    static AgentWorld parseSem1_GroundObjects(WordTree sw, AgentWorld stateWorld) throws Exception {
+    static AgentWorld parseSem1_GroundObjects(WordTree sw, AgentWorld stateWorld, DiscourseDomain references)
+	    throws Exception {
 	AgentWorld wS0 = new AgentWorld();
 
 	// CREATE ALL NOUN OBJECTS into a new world ws0
@@ -146,7 +154,7 @@ public class SemanticParser {
 		boolean grounded = sem.isTrue(Lexicon.SEM_GROUNDED);
 		if (grounded) {
 		    a.props.remove(Lexicon.SEM_GROUNDED);
-		    Agent aGround = WorldMatcher.find(a, stateWorld.getAgents());
+		    Agent aGround = WorldMatcher.find(a, references, stateWorld.getAgents());
 		    if (aGround != null) {
 			a = aGround; // ground
 		    } else {
@@ -159,59 +167,27 @@ public class SemanticParser {
 		    wS0.createAgent(a, false);
 		}
 		w.obj = a;
+		references.addReferent(a); // update reference
 	    }
 	}
 	return wS0;
 
     }
 
-    public static AgentWorld parseSem2(String s, Lexicon lexicon, AgentWorld world) throws Exception {
+    public static AgentWorld parseSem2(String s, Lexicon lexicon, AgentWorld world, DiscourseDomain references)
+	    throws Exception {
 	// Parse Syn0, Syn1, Syn2
 	WordTree sw = SimpleParser.parse(s.split(" "), lexicon);
 
-	// Parse SEM1 SEM2
-	AgentWorld wS0 = parseSem1(sw, world);
+	// Parse SEM1
+	AgentWorld wS0 = parseSem1(sw, world, references);
 
-	parseSem2(wS0, world);
-
-	return wS0; // perhaps we should return an unmodified copy before sem2
-    }
-
-    /**
-     * Create agents not yet in world
-     * 
-     *
-     * @param wS0
-     * @param world
-     * @throws Exception
-     */
-    public static void parseSem2(AgentWorld wS0, AgentWorld world) throws Exception {
+	// Create missing agents
 	for (Agent a : wS0.getAgents()) {
 	    world.createAgent(a, true);
 	}
-	// // THIS SHOULD BE REPLACED BY SOME TREE MATCHING ALGO, but right now
-	// // world is a flat list of agents and their inventories
-	//
-	// for (Agent a : wS0.getAgents()) {
-	// if (a.isInInventory()) // FIXME are we sure?
-	// continue;
-	//
-	// if (!a.exists) { // need to be created
-	// world.createAgent(a, true);
-	// a.exists = true;
-	// } else { // match and update.
-	// // Agent aG = WorldMatcher.find(a, world.getAgents());
-	// // if (aG == null) {
-	// // world.createAgent(a, true);
-	// // a.exists = null; // ERROR, COULD NOT FIND GROUND
-	// // } else {
-	// // SemWorldMappper.update(a, aG);
-	// // }
-	// if (!world.getAgents().contains(a)) {
-	// logger.error("Object should be already in world: " + a);
-	// }
-	// }
-	// }
+
+	return wS0; // perhaps we should return an unmodified copy before sem2
     }
 
 }

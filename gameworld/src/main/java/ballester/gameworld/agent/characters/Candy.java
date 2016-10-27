@@ -10,24 +10,24 @@ import ballester.gameworld.agent.GarphicInfo.Shape;
 
 public class Candy extends Agent implements Consumable, StillAgent {
 
-    double normalScale = .5; // shrinking Agent
+    double normalScale = .2; // shrinking Agent
 
     public Candy() {
 	super();
-	this.graphicInfo.shape = Shape.CIRCL;
+	// this.graphicInfo.shape = Shape.CIRCL;
     }
 
     @Override
     public void createInWorld(AgentWorld world) {
 	super.createInWorld(world);
-	double normalHealth = 5.0;
+	double normalHealth = 20.0;
 	this.props.set(AgentProperties.PropName.HEALTH_NORMAL, normalHealth);
 	this.props.set(AgentProperties.PropName.HEALTH, normalHealth);
     }
 
     @Override
     protected void setSize() {
-	setSizeBeast(normalScale, normalScale);
+	props.setSizeRelative(normalScale, normalScale / 2);
 	this.graphicInfo.drawTitle = false;
     }
 
@@ -36,7 +36,7 @@ public class Candy extends Agent implements Consumable, StillAgent {
 	double d = this.props.getDouble(PropName.HEALTH);
 	d /= this.props.getDouble(PropName.HEALTH_NORMAL);
 	d = normalScale * d;
-	setSizeBeast(d, d);
+	props.setSizeRelative(d, d / 2);
     }
 
 }

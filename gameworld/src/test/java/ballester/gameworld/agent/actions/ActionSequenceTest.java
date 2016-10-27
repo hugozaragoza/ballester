@@ -55,7 +55,7 @@ public class ActionSequenceTest {
 	AgentFilter f2 = new AgentFilter(null, Consumable.class);
 
 	seq = new ActionSequence(world, agent);
-	a1 = new RunTowardsIfEmotional(world, agent, new AgentFilter[] { f2 }, new Hungry(), 100., Action.D_TOUCHING);
+	a1 = new RunTowardsIfEmotional(world, agent, new AgentFilter[] { f2 }, new Hungry(), 100.);
 	seq.add(a1);
 	a2 = new Eat(world, agent, new AgentFilter[] { f2 });
 	seq.add(a2);

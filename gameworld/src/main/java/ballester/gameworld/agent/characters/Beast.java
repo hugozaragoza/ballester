@@ -21,12 +21,11 @@ public class Beast extends LivingAgent {
     public Beast() {
 	super();
 	weapon = true;
-	relativeSpeed = 2.0; // faster than normal
     }
 
     @Override
     protected void setSize() {
-	setSizeBeast(2.0, 3.0);
+	props.setSizeRelative(2.0, 0.66);
     }
 
     @Override
@@ -47,7 +46,7 @@ public class Beast extends LivingAgent {
 	AgentFilter f1 = new FilterLivingAgentWithoutWeapon();
 	AgentFilter f2 = new AgentFilter(null, Consumable.class);
 	AgentFilter[] fs = new AgentFilter[] { f1, f2 };
-	b2.add(new RunTowardsIfEmotional(world, this, fs, new Hungry(), Action.D_VERYFAR, Action.D_TOUCHING));
+	b2.add(new RunTowardsIfEmotional(world, this, fs, new Hungry(), Action.D_VERYFAR));
 	b2.add(new Eat(world, this, fs));
 	bs.add(b2);
 

@@ -25,7 +25,7 @@ import ballester.grammar.simplegrammar.types.WordTree;
 public class ExampleApplication {
     public static String line1 = "===============================================";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 	initLogs();
 
 	OrderedTree.displayNodeIndices = true;

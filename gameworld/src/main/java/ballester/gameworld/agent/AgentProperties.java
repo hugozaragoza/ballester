@@ -16,6 +16,7 @@ import org.apache.log4j.Logger;
 
 import ballester.gameworld.agent.AgentProperties.PropName;
 import ballester.gameworld.agent.emotionalstate.EmotionalState;
+import ballester.gameworld.physics.Point;
 
 /**
  * 
@@ -112,6 +113,10 @@ public class AgentProperties {
 	return getDouble(PropName.HEALTH);
     }
 
+    public Double getHealthNormal() {
+	return getDouble(PropName.HEALTH_NORMAL);
+    }
+
     public boolean isExists() {
 	return getBoolean(PropName.EXISTS);
     }
@@ -121,6 +126,24 @@ public class AgentProperties {
      */
     public void remove(String semGrounded) {
 	properties.remove(semGrounded);
+    }
+
+    public void setSize(double w, double h) {
+	set(PropName.SIZEH, h);
+	set(PropName.SIZEW, w);
+    }
+
+    private static final double RATIO = 1.61803398875;
+    private static final double UNITWIDTH = 30;
+
+    public void setSizeRelative(double relW, double relH) {
+	setSize(UNITWIDTH * relW, UNITWIDTH * RATIO * relH);
+    }
+
+    public Point getSize() {
+	double w = getDouble(PropName.SIZEW);
+	double h = getDouble(PropName.SIZEH);
+	return new Point(w, h);
     }
 
 }

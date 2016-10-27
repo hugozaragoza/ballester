@@ -27,6 +27,8 @@ public class SimpleParser {
 
     public static final String ARG2 = "_arg2";
     public static final String ARG1 = "_arg1";
+    public static final String ARGn1 = "_argN1";
+    public static final String ARGn2 = "_argN2";
     final private static Logger logger = Logger.getLogger(SimpleParser.class);
 
     /**
@@ -50,11 +52,12 @@ public class SimpleParser {
     }
 
     /**
-     * FIXME : placeholder, not yet implemented fully
+     * FIXME : placeholder, grammar not yet implemented
      * 
      * @param sentence
+     * @throws Exception
      */
-    public static void parseSyn1(WordTree sentence) {
+    public static void parseSyn1(WordTree sentence) throws Exception {
 	HashSet<Integer> visited = new HashSet<Integer>(sentence.size());
 	String oldSent = "";
 	boolean update = false;
@@ -89,34 +92,22 @@ public class SimpleParser {
 			    break;
 			}
 		    }
+		}
 
-		} else if (order == 1) {
+		else if (order == 1) {
+
+		    if (pos.equals(Lexicon.Pos.COMP.name())) {
+			pushARGS_leftRight(sentence, i, ARGn1, ARGn2);
+		    }
+
+		} else if (order == 10) {
 
 		    if (logger.isDebugEnabled()) {
 			logger.debug("Inspecting POS:[" + pos + "] LEMMA:[" + w.lemma + "]");
 		    }
 		    if (pos.equals(Lexicon.Pos.V2.name())) {
 			// ASSUME ARG1 is previous and ARG2 is next:
-			Word v = sentence.getNode(i);
-			int arg1i = sentence.getPreviousSibling(i);
-			int arg2i = sentence.getNextSibling(i);
-			Word arg1 = sentence.getNode(arg1i);
-			try {
-			    v.semmantics.add(new Feature(ARG1, arg1));
-			} catch (Exception e) {
-			    logger.error("ERROR ADDING ARG1 TO " + v);
-			    throw (e);
-			}
-			Word arg2 = sentence.getNode(arg2i);
-			try {
-			    v.semmantics.add(new Feature(ARG2, arg2));
-			} catch (Exception e) {
-			    logger.error("ERROR ADDING ARG2 TO " + v);
-			    throw (e);
-			}
-			v.semmantics.add(new Feature(ARG2, arg2));
-			sentence.remove(arg1i);
-			sentence.remove(arg2i);
+			pushARGS_leftRight(sentence, i, ARG1, ARG2);
 			update = true;
 			visited.add(i);
 			break;
@@ -137,8 +128,36 @@ public class SimpleParser {
 		}
 		order++;
 	    }
-	} while (order < 10);
+	} while (order < 100);
 
+    }
+
+    /**
+     * @param sentence
+     * @param i
+     * @throws Exception
+     */
+    private static void pushARGS_leftRight(WordTree sentence, int i, String arg1FeatName, String arg2FeatName)
+	    throws Exception {
+	int arg1i = sentence.getPreviousSibling(i);
+	int arg2i = sentence.getNextSibling(i);
+	Word v = sentence.getNode(i);
+	Word arg1 = sentence.getNode(arg1i);
+	try {
+	    v.semmantics.add(new Feature(arg1FeatName, arg1));
+	} catch (Exception e) {
+	    logger.error("ERROR ADDING " + arg1FeatName + " TO " + v);
+	    throw (e);
+	}
+	Word arg2 = sentence.getNode(arg2i);
+	try {
+	    v.semmantics.add(new Feature(arg2FeatName, arg2));
+	} catch (Exception e) {
+	    logger.error("ERROR ADDING " + arg2FeatName + " TO " + v);
+	    throw (e);
+	}
+	sentence.remove(arg1i);
+	sentence.remove(arg2i);
     }
 
     /**
@@ -152,7 +171,7 @@ public class SimpleParser {
 	return GrammarOperations.blendSemmanticsWithNextSyntaxMatchingFeat(sentence, i, fs, true);
     }
 
-    public static WordTree parse(String[] sentence, Lexicon lex) {
+    public static WordTree parse(String[] sentence, Lexicon lex) throws Exception {
 	WordTree tree;
 
 	if (logger.isDebugEnabled()) {

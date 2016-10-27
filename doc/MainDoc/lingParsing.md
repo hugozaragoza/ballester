@@ -24,13 +24,24 @@ ADJ, DET in NP: Determinants push their existence semantics into the N and are r
 
 V: Word arguments of verbs are pushed as semantic features of verb and removed from sentence.
 
+**Example**
+
+"The princess is red"
+
+|Name|Example|
+|---|---|
+|Syn0|([the] , [princess] , [to_be] , [red])|
+|Syn1|([to_be : ARG1([princess]',PRINCESS), ARG2:[red]]')
+ 
+Notation:
+[word] : lexicon word
+[word]' : lexicon word with semantics modified by syntax
+WORD : object in state world
+
 #### Parse Sem1
 
   * parseSem1_GroundObjects : links subj arguments to existing world objects, creates them if needed
   
-  
-
-
   * parse Sem1.b : arg1,v,arg2 -> wObj : produced a sentence world describing the subject updated by the object
   * parse Sem1.c : (w,wSubj,sObj) -> w : updates the game world w
   
@@ -38,7 +49,8 @@ V: Word arguments of verbs are pushed as semantic features of verb and removed f
   
 
 
-#####Java Implementation
+
+#### Java Implementation
 
 * Parse0 and Parse1: `ballester.grammar.simplegrammar.parse.SimpleParser`
   * see ballester.simplegrammar.parse
@@ -46,6 +58,15 @@ V: Word arguments of verbs are pushed as semantic features of verb and removed f
 * Parse3: `websays.semgame.mapper.SemWorldMappper` 
 * Parse3a: mapToNewAgent
 * Transalte:
+
+#### Issues
+
+**Composites**
+"the princess is red" , composites and parseSem1
+
+Seems there should be an interface AgentLanguageSemantics that isolates part of Agent functions needed by parseSem1 (e.g. addToInventory, setMood, setProps)
+
+We would also need a AgentLanguageSemanticsComposite to deal with the multiple object cases "princess and dragon are red"
 
 
 #####Other ideas:

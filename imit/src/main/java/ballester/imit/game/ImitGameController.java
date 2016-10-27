@@ -6,6 +6,8 @@
  */
 package ballester.imit.game;
 
+import java.util.ArrayList;
+
 import ballester.gameworld.agent.Agent;
 import ballester.gameworld.agent.AgentWorld;
 import ballester.gameworld.control.GameController;
@@ -16,6 +18,7 @@ import ballester.gameworld.renderer.Renderer;
 import ballester.grammar.simplegrammar.parse.SimpleParser;
 import ballester.grammar.simplegrammar.types.Lexicon;
 import ballester.imit.mapper.SemWorldMappper;
+import ballester.imit.semanticparse.DiscourseDomain;
 import ballester.imit.semanticparse.SemanticParser;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
@@ -33,11 +36,13 @@ public class ImitGameController extends GameController {
     public Lexicon lexicon = Lexicon.getLexicon();
     SimpleParser parser = new SimpleParser();
     SemWorldMappper mapper = new SemWorldMappper();
+    DiscourseDomain dd;
 
-    public ImitGameController(Renderer renderer, Script script, double width, double height) {
-	super(script, renderer, width, height);
+    public ImitGameController(Renderer renderer, Script script, double width, double height, boolean onedimensional) {
+	super(script, renderer, width, height, onedimensional);
 	lexicon = Lexicon.getLexicon();
 	parser = new SimpleParser(); // parse0 and parse1
+	dd = new DiscourseDomain(this.world);
     }
 
     public void interpret(String s, GraphicRenderer1 rendererSentenceWorld) throws Exception {
@@ -46,7 +51,7 @@ public class ImitGameController extends GameController {
 	if (s.toLowerCase().startsWith("there was")) {
 	    s = s.substring("there was".length());
 	}
-	AgentWorld wS0 = SemanticParser.parseSem2(s, lexicon, world);
+	AgentWorld wS0 = SemanticParser.parseSem2(s, lexicon, world, dd);
 
 	drawSentenceWorld(wS0, rendererSentenceWorld);
 	draw();

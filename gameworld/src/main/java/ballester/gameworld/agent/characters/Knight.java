@@ -8,6 +8,7 @@ package ballester.gameworld.agent.characters;
 
 import ballester.gameworld.agent.AgentFilter;
 import ballester.gameworld.agent.Consumable;
+import ballester.gameworld.agent.GarphicInfo.Shape;
 import ballester.gameworld.agent.actions.Action;
 import ballester.gameworld.agent.actions.ActionSequence;
 import ballester.gameworld.agent.actions.Bored;
@@ -21,7 +22,13 @@ import ballester.gameworld.agent.emotionalstate.ThreatenedBy;
  * @author hugoz
  *
  */
-public class Knight extends Beast {
+public class Knight extends LivingAgent {
+
+    public Knight() {
+	super();
+	relativeSpeed *= 1.3; // slightly faster than normal living agent
+	weapon = true;
+    }
 
     @Override
     protected Action getAction() {
@@ -32,7 +39,7 @@ public class Knight extends Beast {
 	this.emotions.add(0, new Hungry());
 	this.emotions.add(0, new ThreatenedBy(new AgentFilter(Beast.class, null), Action.D_FAR));
 
-	// Run away from enemy
+	// Run towards enemy at 2x speed
 	Action b = new RunWhenThreatened(world, this, 2.0);
 	bs.add(b);
 

@@ -21,7 +21,7 @@ public class GameWorldDebug {
     public static void main(String[] args) {
 
 	// RUN:
-	GameController mc = new GameController(new MyScript(), new ConsoleRenderer(), 100, 100);
+	GameController mc = new GameController(new MyScript(), new ConsoleRenderer(), 100, 100, false);
 	for (int i = 0; i < MAX_EPOCHS; i++) {
 	    mc.runCycle();
 	    if (mc.checkGameEnd())

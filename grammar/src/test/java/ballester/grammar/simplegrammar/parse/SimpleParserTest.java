@@ -6,6 +6,7 @@
  */
 package ballester.grammar.simplegrammar.parse;
 
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -25,9 +26,11 @@ public class SimpleParserTest {
      * (SYN0 and SYN1)
      * 
      * Test that a Det passes existance semantics to N
+     * 
+     * @throws Exception
      */
     @Test
-    public void test_VDet() {
+    public void test_VDet() throws Exception {
 
 	Word p = lex.find("princess");
 	Assert.assertNull(p.semmantics.getFeature("_exists"));
@@ -55,14 +58,30 @@ public class SimpleParserTest {
 
     }
 
+    @Test
+    public void test_Composites() throws Exception {
+
+	// SYN0
+	WordTree sen = SimpleParser.parseSyn0(new String[] { "a", "princess", "and", "a", "dragon" }, lex);
+	SimpleParser.parseSyn1(sen);
+	System.out.println(sen);
+	Assert.assertEquals(2, sen.size());
+	Word n = sen.getNode(sen.getChild(sen.getRoot(), 0));
+	Assert.assertEquals(n.lemma, "and");
+	// TODO the rest
+
+    }
+
     /**
      * (SYN0 and SYN1)
      * 
      * Test ARG1 words are pushed into verb semantics
      * 
+     * @throws Exception
+     * 
      */
     @Test
-    public void test_V2() {
+    public void test_V2() throws Exception {
 
 	// a princess had a bow
 	String subj = "princess";

@@ -29,6 +29,9 @@ import ballester.gameworld.agent.actions.Action;
 import ballester.gameworld.agent.actions.ActionSequence;
 import ballester.gameworld.agent.characters.Candy;
 import ballester.gameworld.agent.characters.Dragon;
+import ballester.gameworld.agent.characters.Knight;
+import ballester.gameworld.agent.characters.Princess;
+import ballester.gameworld.control.GameController;
 import ballester.gameworld.control.Script;
 import ballester.gameworld.renderer.GraphicRenderer1;
 import ballester.gameworld.renderer.Narrator;
@@ -75,19 +78,20 @@ public class ExampleIMITApplication extends Application {
 
     {
 
-	Logger.getRootLogger().setLevel(Level.INFO);
-	// Logger.getLogger(SimpleParser.class).setLevel(Level.TRACE);
-	// Logger.getLogger(Action.class).setLevel(Level.DEBUG);
-	Logger.getLogger(Action.class.getPackage().getName()).setLevel(Level.DEBUG);
-	Logger.getLogger(ActionSequence.class).setLevel(Level.TRACE);
-	// Logger.getLogger(AgentProperties.class).setLevel(Level.DEBUG);
-	// Logger.getLogger(GraphicRenderer1.class).setLevel(Level.DEBUG);
-	// Logger.getLogger(Narrator.class).setLevel(Level.DEBUG);
+	Logger.getRootLogger().setLevel(Level.DEBUG);
+	// // Logger.getLogger(SimpleParser.class).setLevel(Level.TRACE);
+	// // Logger.getLogger(Action.class).setLevel(Level.DEBUG);
+	// Logger.getLogger(Action.class.getPackage().getName()).setLevel(Level.DEBUG);
+	// Logger.getLogger(ActionSequence.class).setLevel(Level.TRACE);
+	// // Logger.getLogger(AgentProperties.class).setLevel(Level.DEBUG);
+	// // Logger.getLogger(GraphicRenderer1.class).setLevel(Level.DEBUG);
+	// // Logger.getLogger(Narrator.class).setLevel(Level.DEBUG);
     }
 
     private static final double TOT_W = 1200;
     private static final double TOT_H = 650;
-    private static final double INTERVAL_BACKGROUNDGAME1 = 2000;
+    private static final double INTERVAL_BACKGROUNDGAME1 = 500;
+    private static final boolean ONEDIMENSIONAL = true;
 
     private boolean display_fullScreen = false;
 
@@ -128,7 +132,7 @@ public class ExampleIMITApplication extends Application {
 	rendererC.setDebugOff();
 	debug = false;
 	double shr = 6. / 10.;
-	game = new ImitGameController(rendererC, new MyScript(), TOT_W * shr, TOT_H * shr);
+	game = new ImitGameController(rendererC, new MyScript(), TOT_W * shr, TOT_H * shr, ONEDIMENSIONAL);
 
 	// DISPLAY WORDS:
 	lexicPane.getEngine().loadContent(game.lexicon.info1());
@@ -417,14 +421,31 @@ class MyScript implements Script {
     public void addCharacters(AgentWorld world, int epoch) {
 	Random rnd = new Random();
 	if (epoch == 0) {
-	    for (int i = 0; i < 100; i++) {
-		Candy c = new Candy();
-		world.createAgent(c, true);
-		int ci = rnd.nextInt(Lexicon.colorNames.length);
-		c.props.set(PropName.COLOR, "orange");
-	    }
-	    Dragon d = new Dragon();
-	    world.createAgent(d, true);
+
+	    // for (int i = 0; i < 7; i++) {
+	    // Candy c = new Candy();
+	    // world.createAgent(c, true);
+	    // c.props.set(PropName.COLOR, "orange");
+	    // }
+
+	    Princess a = new Princess();
+	    world.createAgent(a, true);
+
+	    Candy c = new Candy();
+	    world.createAgent(c, true);
+
+	    a.point.setX(20);
+	    c.point.setX(60);
+
+	    // Dragon d = new Dragon();
+	    // world.createAgent(d, true);
+	    //
+	    // Knight k = new Knight();
+	    // world.createAgent(k, true);
+	    //
+	    // k.point.setX(20);
+	    // d.point.setX(100);
+
 	}
     }
 

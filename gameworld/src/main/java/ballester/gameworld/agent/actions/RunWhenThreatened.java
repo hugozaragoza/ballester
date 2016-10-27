@@ -17,10 +17,11 @@ public class RunWhenThreatened extends MoveToAction {
 
     public RunWhenThreatened(AgentWorld world, Agent actor, double speedModifier) {
 	super(world, actor);
+	this.speedModifier = speedModifier;
 	if (speedModifier < 0) {
 	    this.display_action = "run away!";
 	} else {
-	    this.display_action = "approach!";
+	    this.display_action = "you don't scare me!";
 	}
     }
 

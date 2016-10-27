@@ -21,19 +21,24 @@ public class AgentWorld {
     public int epoch = 0;
 
     public double width, height;
+    public boolean oneDimensional;
 
     // public Renderer renderer;
 
     public Narrator narrator = new Narrator();
 
+    public double overlapAllowed;
+
     public AgentWorld() {
-	this(100., 100.);
+	this(100., 100., false, 0.0);
     }
 
-    public AgentWorld(double width, double height) {
+    public AgentWorld(double width, double height, boolean oneDimensional, double overlapAllowed) {
 	this.width = width;
 	this.height = height;
+	this.oneDimensional = oneDimensional;
 	physics = new Physics(width, height);
+	this.overlapAllowed = overlapAllowed;
     }
 
     public void act() {
@@ -84,7 +89,7 @@ public class AgentWorld {
      */
     private Point chooseStartingPoint() {
 	double x = rnd.nextDouble() * this.width;
-	double y = rnd.nextDouble() * this.height;
+	double y = oneDimensional ? (this.height / 2) : (rnd.nextDouble() * this.height);
 	return new Point(x, y);
     }
 
@@ -104,6 +109,7 @@ public class AgentWorld {
 		logger.debug("DEAD AGENT " + a);
 	    }
 	}
+
 	agents.removeAll(remove);
     }
 

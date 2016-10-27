@@ -25,12 +25,12 @@ public class LivingAgent extends Agent {
 
     @Override
     public void updateStats() {
-	props.inc(AgentProperties.PropName.HEALTH, -.1);
+	props.inc(AgentProperties.PropName.HEALTH, -.001); // GET HUNGRY
     }
 
     @Override
     protected void setSize() {
-	setSizePerson();
+	props.setSizeRelative(1., 1.);
     }
 
     @Override

@@ -10,7 +10,10 @@ import ballester.gameworld.agent.actions.ActionSequence;
 import ballester.gameworld.agent.emotionalstate.EmotionalState;
 import ballester.gameworld.agent.emotionalstate.Tranquil;
 import ballester.gameworld.examples.GameWorldDebug;
+import ballester.gameworld.physics.Dynamics;
+import ballester.gameworld.physics.Geometry;
 import ballester.gameworld.physics.HPoint;
+import ballester.gameworld.physics.Point;
 
 /**
  * 
@@ -46,7 +49,6 @@ public class Agent {
     // ACTIONS AND DYNAMICS:
     protected boolean weapon = false; // TODO make a weapons system
     public double relativeSpeed = 0.5;
-    public double minSpeed = relativeSpeed;
 
     // Current State
     public EmotionalState emotionalState;
@@ -58,9 +60,7 @@ public class Agent {
     // External
     public transient AgentWorld world;
     public transient Action lastAction = null;
-
-    private static final double RATIO = 1.61803398875;
-    private static final double UNITSIZE = 20;
+    public boolean lastMoved = false;
 
     /**
      * use only for reflection and serialization
@@ -78,8 +78,8 @@ public class Agent {
 	agents++;
 	this.name = newName();
 	this.action = getAction();
-	this.props.inc(AgentProperties.PropName.HEALTH_NORMAL, 20.0);
-	this.props.inc(AgentProperties.PropName.HEALTH, 20.0);
+	this.props.set(AgentProperties.PropName.HEALTH_NORMAL, 20.0);
+	this.props.set(AgentProperties.PropName.HEALTH, 20.0);
 	setSize();
     }
 
@@ -93,17 +93,21 @@ public class Agent {
     }
 
     public void updateEmotionalState() {
-
+	EmotionalState oldEm = emotionalState;
+	emotionalState = null;
 	// ORGANIC emotional state
 	for (EmotionalState es : emotions) {
 	    boolean s = es.preCondition(this, world);
 	    if (s) {
-		if (!es.equals(emotionalState)) {
-		    world.narrator.narrate("$1 became $2", this, es);
-		}
 		emotionalState = es;
-
 		break;
+	    }
+	}
+	if (oldEm != null && emotionalState == null) {
+	    world.narrator.narrate("$1 was no longer $2", this, oldEm);
+	} else {
+	    if (emotionalState != null && !emotionalState.equals(oldEm)) {
+		world.narrator.narrate("$1 became $2", this, emotionalState);
 	    }
 	}
 
@@ -159,23 +163,35 @@ public class Agent {
     }
 
     protected void setSize() {
-	setSizeBeast(1.0, 1.0);
-    }
-
-    protected void setSizePerson() {
-	double h = UNITSIZE;
-	props.set(PropName.SIZEH, h);
-	props.set(PropName.SIZEW, h / RATIO);
-    }
-
-    protected void setSizeBeast(double relSizeH, double relSizeW) {
-	props.set(PropName.SIZEH, UNITSIZE * relSizeH);
-	props.set(PropName.SIZEW, UNITSIZE * relSizeW);
+	props.setSize(1.0, 1.0);
     }
 
     /**
      * Run for every agent at the end of turn
      */
     public void endOfTurn() {
+	lastMoved = false;
     }
+
+    /**
+     * @param dynamics
+     * @param object
+     */
+    public void move(Dynamics dynamics) {
+	lastMoved = true;
+	point.remember();
+	world.physics.move(point, dynamics);
+    }
+
+    /**
+     * @return
+     */
+    public String infoBox() {
+	return "P=" + this.point + ", S=" + this.props.getSize() + ", BOX=(" + //
+		(this.point.getX() - this.props.getSize().getX() / 2.0) + "," + //
+		(this.point.getY() - this.props.getSize().getX() / 2.0) + ") (" + //
+		(this.point.getX() + this.props.getSize().getX() / 2.0) + "," + //
+		(this.point.getY() + this.props.getSize().getX() / 2.0) + ")";
+    }
+
 }
